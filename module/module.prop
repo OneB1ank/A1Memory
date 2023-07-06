@@ -1,8 +1,8 @@
 id=Hc_memory
-name=A1-内存管理 [Redemption]
-version=v4 (2023.7.20)
-versionCode=401
+name=A1-内存管理 [测试版]
+version=v4 (2023.7.6)
+versionCode=402
 author=HChai
 description=Third-party memory management for Android. If you have any feedback, please send an email to AiHChai@outlook.com.
-updateJson=https://yun.hc66.top/d/%E4%BA%91/A1%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/A1.json
+updateJson=https://raw.githubusercontent.com/OneB1ank/A1Memory/main/version.json
 originalAuthor=HChai
