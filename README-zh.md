@@ -85,10 +85,10 @@ A: 目前模块仅支持arm-v8a平台，其他平台暂时不支持。
 - [@HChenX](https://github.com/HChenX)
 
 感谢以下用户的测试反馈和错误定位：
-- [@火機](coolapk)
+- @火機(coolapk)
 
 ## 捐赠支持
 如何你觉得这个模块很好用，可以捐赠来支持我
 - [爱发电](https://afdian.net/a/HCha1)
-- [USDT](TRC20)
+- USDT(TRC20)
   > 地址: TSqTqn2NcyUAbEwsdGgsrYoU5pokno5PnQ

@@ -85,10 +85,10 @@ Thanks to the following users or projects for their source code contributions to
 - [@HChenX](https://github.com/HChenX)
 
 Thanks to the following users for their testing feedback and bug identification:
-- [@火機](coolapk)
+- @火機(coolapk)
 
 ## Support Donations
 If you find this module useful, you can make a donation to support me.
 - [爱发电](https://afdian.net/a/HCha1)
-- [USDT](TRC20)
+- USDT(TRC20)
   > Address: TSqTqn2NcyUAbEwsdGgsrYoU5pokno5PnQ
