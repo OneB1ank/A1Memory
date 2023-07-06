@@ -3,6 +3,6 @@ name=A1-内存管理 [Beta]
 version=v4 (2023.7.6)
 versionCode=402
 author=HChai
-description=Third-party memory management, support Android8 ~ 13. project: https://github.com/OneB1ank/A1Memory
+description=Third-party memory management, support Android 8 ~ 13. project: https://github.com/OneB1ank/A1Memory
 updateJson=https://raw.githubusercontent.com/OneB1ank/A1Memory/main/version.json
 originalAuthor=HChai
