@@ -1,0 +1,39 @@
+A1Memroy
+
+Third-Party Software Notices and Information
+============================================
+
+This repository incorporates components from the following projects:
+
+1. Dobby (https://github.com/jmpews/Dobby): a lightweight, multi-platform, multi-architecture hook framework.
+
+   - License: Apache License 2.0 (https://github.com/jmpews/Dobby/blob/master/LICENSE)
+   - Copyright: jmpews
+   - Other relevant information: Please refer to the Dobby project for additional details and acknowledgments.
+
+2. And64InlineHook (https://github.com/Rprop/And64InlineHook): Lightweight ARMv8-A(ARM64, AArch64, Little-Endian) Inline Hook Library for Android C/C++
+
+   - License: MIT License (https://github.com/Rprop/And64InlineHook/blob/master/LICENSE)
+   - Copyright: Rprop
+   - Other relevant information: Please refer to the And64InlineHook project for additional details and acknowledgments.
+
+3. json (https://github.com/nlohmann/json): JSON for Modern C++
+
+   - License: MIT License (https://github.com/nlohmann/json/blob/develop/LICENSE.MIT)
+   - Copyright: nlohmann
+   - Other relevant information: Please refer to the json project for additional details and acknowledgments.
+
+4. spdlog (https://github.com/gabime/spdlog): Fast C++ logging library.
+
+   - License: MIT License (https://github.com/gabime/spdlog/blob/v1.x/LICENSE)
+   - Copyright: gabime
+   - Other relevant information: Please refer to the spdlog project for additional details and acknowledgments.
+
+5. AndroidPtraceInject (https://github.com/SsageParuders/AndroidPtraceInject): Android Ptrace Inject for all ABIs and all APIs. Help you inject Shared Library on Android.
+
+   - License: MIT License (https://github.com/SsageParuders/AndroidPtraceInject/blob/master/LICENSE)
+   - Copyright: SsageParuders
+   - Other relevant information: Please refer to the AndroidPtraceInject project for additional details and acknowledgments.
+
+Please refer to the individual components' licenses and original sources for more detailed information.
+The licenses and copyright notices for each component can be found in their respective source code files or accompanying documentation.
