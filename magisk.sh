@@ -15,17 +15,27 @@
 #along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 
-# 获取当前路径
-MODPATH=${0%/*}
+set -e
 
-# 获取当前日期（格式为YYYY-MM-DD）
+MODPATH=${0%/*}
 CURRENT_DATE=$(date +%Y-%m-%d)
 
-# 进入模块目录
-cd $MODPATH/module
+init() {
+    cd $MODPATH/module
+    echo "- 切换到模块路径"
+}
 
-# 打包并压缩模块，文件名中添加日期
-zip -r -9 "A1Memory-$CURRENT_DATE.zip" *
+packaged_Modules() {
+    cp -f $MODPATH/config/memory.json $MODPATH/module/config/memory.json
+    zip -r -9 "A1Memory-$CURRENT_DATE.zip" *
+    mv -f "A1Memory-$CURRENT_DATE.zip" "../build/"
+    echo "- 打包成功，模块名" "A1Memory-$CURRENT_DATE.zip"
+}
 
-# 移动到上一层路径文件夹build
-mv -f "A1Memory-$CURRENT_DATE.zip" "../build/"
+clear() {
+    rm config/memory.json
+}
+
+init
+packaged_Modules
+clear

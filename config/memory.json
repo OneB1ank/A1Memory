@@ -17,7 +17,7 @@
             }
         },
         "log": {
-            "path": "/data/adb/modules/Hc_memory/A1_Management.log",
+            "path": "/sdcard/Android/HChai/HC_memory/Run.log",
             "level": "info"
         },
         "initProcess": {
