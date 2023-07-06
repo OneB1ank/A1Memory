@@ -1,0 +1,92 @@
+{
+    "project": {
+        "name": "官方配置 [23.06.25]",
+        "author": "火機@coolapk"
+    },
+    "modules": {
+        "config": {
+            "path": "/sdcard/Android/HChai/HC_memory",
+            "modulePath": "/data/adb/modules/Hc_memory",
+            "list": {
+                "name": "名单列表.conf",
+                "whiteList": {
+                    "optional": true,
+                    "smart": true,
+                    "system": false
+                }
+            }
+        },
+        "log": {
+            "path": "/data/adb/modules/Hc_memory/A1_Management.log",
+            "level": "info"
+        },
+        "initProcess": {
+            "afterTopChange": {
+                "sleep": 1
+            }
+        },
+        "a1Memory": {
+            "enable": true,
+            "oomAdj": 905
+        },
+        "initCutMemory": {
+            "freed": {
+                "enable": true,
+                "level": "80",
+                "regex": "( CAC|SVC|CEM).*",
+                "change": 20
+            }
+        },
+        "initInjection": {
+            "enable": true,
+            "processName": "/system/bin/lmkd",
+            "symbolsFunc": "hc_hook",
+            "libraryPath": "/data/adb/modules/Hc_memory/lib/arm64-v8a/libhook_lmkd.so",
+            "lmkd": {
+                "memThreshold": {
+                    "enable": true,
+                    "value": 90
+                },
+                "hookFunc": {
+                    "kill": true,
+                    "pidfd_send_signal": true,
+                    "__android_log_print": false,
+                    "meminfo": {
+                        "updateTime": 60
+                    }
+                },
+                "model": {
+                    "inlineHook": "dobby"
+                }
+            }
+        },
+        "appSleep": {
+            "enable": true,
+            "idle": "current",
+            "bg": "ignore",
+            "top": "allow"
+        },
+        "clever": {
+            "enable": true
+        },
+        "crazyKill": {
+            "enable": false
+        }
+    },
+    "file": {
+        "write": [
+            {
+                "path": "/proc/sys/fs/inotify/max_queued_events",
+                "content": "102400"
+            },
+            {
+                "path": "/proc/sys/fs/inotify/max_user_watches",
+                "content": "102400"
+            },
+            {
+                "path": "/proc/sys/fs/inotify/max_user_instances",
+                "content": "1024"
+            }
+        ]
+    }
+}

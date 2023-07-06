@@ -1,0 +1,4 @@
+persist.vendor.qti.memory.enable=false
+persist.sys.spc.enabled=false
+ro.lmk.kill_heaviest_task=false
+ro.lmk.debug=false
