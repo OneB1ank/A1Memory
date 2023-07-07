@@ -5,4 +5,4 @@
 
 Please make sure you have a wealth of knowledge reserves, otherwise please do not modify the configuration file at will, so as not to cause unexpected problems.
 
-[English document](README.md) | [中文文档](README-zh.md)
+[English document](JSON-CONFIG.md) | [中文文档](JSON-CONFIG-zh.md)
