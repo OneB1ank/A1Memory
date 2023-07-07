@@ -36,7 +36,7 @@ init() {
     kill -9 $(ps -ef | grep 'lmkd' |grep -v 'grep' | awk '{print $1}')
     sleep 5
     cd $MODDIR
-    rm "$logfile_path"
+    rm -rf "$logfile_path"
 }
 
 memory() {
