@@ -41,7 +41,7 @@ This repository incorporates components from the following projects:
    - Copyright: ocornut
    - Other relevant information: Please refer to the imgui project for additional details and acknowledgments.
 
-7. imgui (https://github.com/SsageParuders/Android_Native_Surface): Android Native Surface
+7. Android_Native_Surface (https://github.com/SsageParuders/Android_Native_Surface): Android Native Surface
 
    - License: MIT License (https://github.com/SsageParuders/Android_Native_Surface/blob/master/LICENSE)
    - Copyright: SsageParuders
