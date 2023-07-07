@@ -90,5 +90,6 @@ Thanks to the following users for their testing feedback and bug identification:
 ## Support Donations
 If you find this module useful, you can make a donation to support me.
 - [爱发电](https://afdian.net/a/HCha1)
+- [patreon](https://patreon.com/A1memory)
 - USDT(TRC20)
   > Address: TSqTqn2NcyUAbEwsdGgsrYoU5pokno5PnQ

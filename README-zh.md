@@ -90,5 +90,6 @@ A: 目前模块仅支持arm-v8a平台，其他平台暂时不支持。
 ## 捐赠支持
 如何你觉得这个模块很好用，可以捐赠来支持我
 - [爱发电](https://afdian.net/a/HCha1)
+- [patreon](https://patreon.com/A1memory)
 - USDT(TRC20)
   > 地址: TSqTqn2NcyUAbEwsdGgsrYoU5pokno5PnQ
