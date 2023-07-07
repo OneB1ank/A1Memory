@@ -50,6 +50,8 @@ The `name` and `author` are reflected in the logs in the following format:
 [2023-07-06 19:00:22] [info] config 官方配置 [23.06.25] | by: 火機@coolapk
 ```
 
+- For more detailed instructions on the JSON configuration file, please refer to[here.](config/JSON-CONFIG.md)
+
 ## Frequently Asked Questions
 Q: Can it be used in conjunction with other memory optimization modules?
 A: A1 memory management works completely differently from other memory optimization methods, so using it together with other modules will only yield a cumulative effect of 1+1=2.
