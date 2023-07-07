@@ -274,16 +274,16 @@ A1内存管理v4可以使用hook让lmkd无法杀死后台进程。下面是用�
 | 字段名   | 类型 | 描述                                           |
 | -------- | -------- | ---------------------------------------------- |
 | hookFunc     | object   | hook函数                                 |
-| kill   | bool   | 是否hook kill函数                          |
-| pidfd_send_signal   | bool   | 是否hook pidfd_send_signal函数                          |
-| __android_log_print   | bool   | 是否hook __android_log_print函数                          |
+| kill   | bool   | 是否hook `kill`函数                          |
+| pidfd_send_signal   | bool   | 是否`hook pidfd_send_signal`函数                          |
+| __android_log_print   | bool   | 是否`hook __android_log_print`函数                          |
 | meminfo   | object   | 内存信息                          |
 | updateTime   | int   | 更新时间，单位为秒                          |
 
 - `hookFunc`表示hook函数。
-- `kill`设置为true以hook kill函数，A1内存管理将会hook kill函数；设置为false则不hook kill函数。
-- `pidfd_send_signal`设置为true以hook pidfd_send_signal函数，A1内存管理将会hook pidfd_send_signal函数以阻止结束进程；设置为false则不hook pidfd_send_signal函数。
-- `__android_log_print`设置为true以hook __android_log_print函数，A1内存管理将会hook __android_log_print函数；设置为false则不hook __android_log_print函数。不建议启用该功能，因为会导致日志无法输出，还有可能会造成lmkd异常。
+- `kill`设置为true以hook kill函数，A1内存管理将会hook `kill`函数；设置为false则不hook `kill`函数。
+- `pidfd_send_signal`设置为true以hook `pidfd_send_signal`函数，A1内存管理将会hook `pidfd_send_signal`函数以阻止结束进程；设置为false则不hook `pidfd_send_signal`函数。
+- `__android_log_print`设置为true以hook `__android_log_print`函数，A1内存管理将会hook `__android_log_print`函数；设置为false则不hook `__android_log_print`函数。不建议启用该功能，因为会导致日志无法输出，还有可能会造成lmkd异常。
 
 ### 内存信息刷新时间
 
@@ -297,7 +297,7 @@ A1内存管理v4可以使用hook让lmkd无法杀死后台进程。下面是用�
 | inlineHook   | string   | inlineHook模式                          |
 
 - `model`表示模式。
-- `inlineHook`默认使用的是[dobby](https://github.com/jmpews/Dobby)来修改函数地址，如果无法正常hook，你可以尝试修改为And64[https://github.com/Rprop/And64InlineHook]。
+- `inlineHook`默认使用的是[dobby](https://github.com/jmpews/Dobby)来修改函数地址，如果无法正常hook，你可以尝试修改为[And64InlineHook](https://github.com/Rprop/And64InlineHook)。
 
 ## 让应用休眠减少CPU和内存使用
 
@@ -340,7 +340,7 @@ KILL 包名:子进程名
 
 ## 写入内容到文件
 
-A1内存管理v4可以将内容写入到文件中。下面是用于控制此行为的参数示例：
+可以将内容写入到文件中。下面是用于控制此行为的参数示例：
 
 ```json
 "file": {
@@ -366,3 +366,20 @@ A1内存管理v4可以将内容写入到文件中。下面是用于控制此行�
 | path   | string   | 文件路径                          |
 | content   | string   | 写入的内容                          |
 
+### 更改配置文件后需要重启手机或者结束HC_memory进程才能生效。
+
+## 致谢
+
+感谢以下用户或项目的源码对本项目的帮助：  
+- [@yc9559](https://github.com/yc9559)
+- [@HChenX](https://github.com/HChenX)
+
+感谢以下用户的测试反馈和错误定位：
+- @火機(coolapk)
+
+## 捐赠支持
+如何你觉得这个模块很好用，可以捐赠来支持我
+- [爱发电](https://afdian.net/a/HCha1)
+- [patreon](https://patreon.com/A1memory)
+- USDT(TRC20)
+  > 地址: TSqTqn2NcyUAbEwsdGgsrYoU5pokno5PnQ
