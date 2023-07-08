@@ -19,14 +19,14 @@ A1 Memory Management v4 utilizes the HAMv2 framework, allowing you to adjust mem
 }
 ```
 
-| Field Name   | Type | Description                                           |
-| -------- | -------- | ---------------------------------------------- |
-| path     | string   | The path to the configuration file.                                 |
-| modulePath   | string   | The path to the module name.                            |
-| name     | string   | The filename of the configuration list file, which stores the whitelist and naughty list.                           |
-| optional   | bool   | Indicates whether the whitelist is enabled. When enabled, processes in the whitelist will not be killed.                           |
-| smart   | bool   | Indicates whether the smart whitelist is enabled. When enabled, processes will be automatically added to the whitelist.                        |
-| system   | bool   | Indicates whether the system whitelist is enabled. When enabled, all system software will be added to the whitelist.                           |
+| Field Name | Type   | Description                                                                                                             |
+| ---------- | ------ | ----------------------------------------------------------------------------------------------------------------------- |
+| path       | string | The path to the configuration file.                                                                                     |
+| modulePath | string | The path to the module name.                                                                                            |
+| name       | string | The filename of the configuration list file, which stores the whitelist and naughty list.                               |
+| optional   | bool   | Indicates whether the whitelist is enabled. When enabled, processes in the whitelist will not be killed.                |
+| smart      | bool   | Indicates whether the smart whitelist is enabled. When enabled, processes will be automatically added to the whitelist. |
+| system     | bool   | Indicates whether the system whitelist is enabled. When enabled, all system software will be added to the whitelist.    |
 
 Please note that when adding entries to the whitelist, they should follow the following format:
 
@@ -45,10 +45,10 @@ Logging Runtime Logs for A1 Memory Management v4, which can be Adjusted by Modif
 }
 ```
 
-| Field Name   | Type | Description                                           |
-| -------- | -------- | ---------------------------------------------- |
-| path     | string   | The path to the log file.                                 |
-| level   | string   | The log level. Available options: debug, info, warn, error, critical.                           |
+| Field Name | Type   | Description                                                           |
+| ---------- | ------ | --------------------------------------------------------------------- |
+| path       | string | The path to the log file.                                             |
+| level      | string | The log level. Available options: debug, info, warn, error, critical. |
 
 If you wish to disable logging, you can set the log level to "critical". Alternatively, if you only want to view logs related to runtime errors, you can set the log level to "warn".
 
@@ -64,9 +64,9 @@ The purpose of this parameter is to prevent the execution of the main function w
 }
 ```
 
-| Field Name   | Type | Description                                           |
-| -------- | -------- | ---------------------------------------------- |
-| sleep     | int   | The waiting time in seconds.                                |
+| Field Name | Type | Description                  |
+| ---------- | ---- | ---------------------------- |
+| sleep      | int  | The waiting time in seconds. |
 
 The "sleep" parameter represents the waiting time, in seconds, after a change in the foreground application. Setting it to 1 second means that after a change in the foreground application, the main function will wait for 1 second before being executed again upon switching to the foreground. In other words, during this 1-second interval of foreground switching, the main function will not be executed.
 This parameter can be used to control the avoidance of repetitive execution of the main function within a certain period of time after a change in the foreground application. It helps prevent unnecessary operations or resource wastage.
@@ -82,10 +82,10 @@ A1 Memory Management v4 can terminate unnecessary processes to free up memory. H
 }
 ```
 
-| Field Name   | Type | Description                                           |
-| -------- | -------- | ---------------------------------------------- |
-| enable     | bool   | Indicates whether to enable the termination of unnecessary processes by A1 Memory Management.                                 |
-| oomAdj   | int   | Only processes with an oomAdj value greater than the specified value will be terminated.                          |
+| Field Name | Type | Description                                                                                   |
+| ---------- | ---- | --------------------------------------------------------------------------------------------- |
+| enable     | bool | Indicates whether to enable the termination of unnecessary processes by A1 Memory Management. |
+| oomAdj     | int  | Only processes with an oomAdj value greater than the specified value will be terminated.      |
 
 - `enable`: Specifies whether to enable A1 Memory Management to terminate unnecessary processes. When set to true, A1 Memory Management will perform process termination. When set to false, A1 Memory Management will not terminate any processes.
 - `oomAdj`: Represents the adjustment value used to determine whether a process should be terminated. Only processes with an oomAdj value greater than the specified "oomAdj" value will be terminated by A1 Memory Management. The "oomAdj" value ranges from 0 to 1000. A higher value will result in fewer terminated processes, while a lower value will result in more terminated processes. It is important to note that not all processes will be identified and terminated. Only processes deemed unnecessary by the algorithm and with an oomAdj value higher than the specified threshold will be terminated.
@@ -105,12 +105,12 @@ A1 Memory Management v4 can enable automatic memory release for applications. He
 }
 ```
 
-| Field Name   | Type | Description                                           |
-| -------- | -------- | ---------------------------------------------- |
-| enable     | bool   | Indicates whether to enable automatic memory release for applications.                                 |
-| level   | string   | A value between 0 and 100, where higher values result in more memory being released.                          |
-| regex   | string   | A regular expression used to match the application status for which memory release is required.                        |
-| change   | int   | Specifies the number of foreground switches before triggering an automatic memory release operation.                          |
+| Field Name | Type   | Description                                                                                          |
+| ---------- | ------ | ---------------------------------------------------------------------------------------------------- |
+| enable     | bool   | Indicates whether to enable automatic memory release for applications.                               |
+| level      | string | A value between 0 and 100, where higher values result in more memory being released.                 |
+| regex      | string | A regular expression used to match the application status for which memory release is required.      |
+| change     | int    | Specifies the number of foreground switches before triggering an automatic memory release operation. |
 
 - `enable`: Specifies whether to enable automatic memory release for applications. When set to true, A1 Memory Management will perform automatic memory release operations for applications. When set to false, A1 Memory Management will not perform automatic memory release operations.
 - `level`: Determines the extent of memory release. The value ranges from 0 to 100, where higher values indicate a greater amount of memory being released, and lower values indicate less memory being released.
@@ -245,13 +245,13 @@ A1 Memory Management v4 can utilize hooks to prevent lmkd (low memory killer dae
 }
 ```
 
-| Field Name   | Type | Description                                           |
-| -------- | -------- | ---------------------------------------------- |
-| initInjection     | object   | Initialization injection configuration.                                 |
-| enable     | bool   | Indicates whether to enable lmkd hooking.                                 |
-| processName   | string   | The name of the process.                            |
-| symbolsFunc   | string   | The name of the function to execute after hooking.                        |
-| libraryPath   | string   | The path to the hook library.                           |
+| Field Name    | Type   | Description                                        |
+| ------------- | ------ | -------------------------------------------------- |
+| initInjection | object | Initialization injection configuration.            |
+| enable        | bool   | Indicates whether to enable lmkd hooking.          |
+| processName   | string | The name of the process.                           |
+| symbolsFunc   | string | The name of the function to execute after hooking. |
+| libraryPath   | string | The path to the hook library.                      |
 
 You can modify the path to inject your hook library into the specified process. I recommend using the absolute path for the process name.
 - `initInjection`: Represents the configuration for initialization injection.
@@ -259,11 +259,11 @@ You can modify the path to inject your hook library into the specified process. 
 
 ### memory threshold 
 
-| Field Name   | Type | Description                                           |
-| -------- | -------- | ---------------------------------------------- |
-| memThreshold     | object   | Memory threshold configuration.                                 |
-| enable   | bool   | Indicates whether to enable the memory threshold.                          |
-| value   | int   | The value at which the memory usage reaches 90%, allowing lmkd to terminate processes.                          |
+| Field Name   | Type   | Description                                                                            |
+| ------------ | ------ | -------------------------------------------------------------------------------------- |
+| memThreshold | object | Memory threshold configuration.                                                        |
+| enable       | bool   | Indicates whether to enable the memory threshold.                                      |
+| value        | int    | The value at which the memory usage reaches 90%, allowing lmkd to terminate processes. |
 
 The memory threshold feature is important as it allows you to stop preventing lmkd from terminating processes when the memory usage reaches a certain level. This feature helps prevent excessive memory usage, which can lead to system lag, but it may result in background processes being terminated. Therefore, you can control the prevention of lmkd from terminating processes by setting the memory threshold.
 - `memThreshold`: Represents the memory threshold feature.
@@ -272,14 +272,14 @@ The memory threshold feature is important as it allows you to stop preventing lm
 
 ### Selecting the functions to hook
 
-| Field Name   | Type | Description                                           |
-| -------- | -------- | ---------------------------------------------- |
-| hookFunc     | object   | Function hook configuration.                                 |
-| kill   | bool   | Indicates whether to hook the `kill` function.                          |
-| pidfd_send_signal   | bool   | Indicates whether to hook the `pidfd_send_signal` function.                          |
-| __android_log_print   | bool   | Indicates whether to hook the `__android_log_print` function.                          |
-| meminfo   | object   | Memory information configuration.                          |
-| updateTime   | int   | Update time in seconds for the memory information.                          |
+| Field Name          | Type   | Description                                                   |
+| ------------------- | ------ | ------------------------------------------------------------- |
+| hookFunc            | object | Function hook configuration.                                  |
+| kill                | bool   | Indicates whether to hook the `kill` function.                |
+| pidfd_send_signal   | bool   | Indicates whether to hook the `pidfd_send_signal` function.   |
+| __android_log_print | bool   | Indicates whether to hook the `__android_log_print` function. |
+| meminfo             | object | Memory information configuration.                             |
+| updateTime          | int    | Update time in seconds for the memory information.            |
 
 - `hookFunc`: Represents the function hook configuration.
 - `kill`: When set to true, A1 Memory Management will hook the `kill` function. When set to false, A1 Memory Management will not hook the `kill` function.
@@ -292,10 +292,10 @@ To efficiently avoid performance impact caused by repetitive refreshing of memin
 - `meminfo`: Represents the memory information.
 - `updateTime`: Specifies the update interval for the occupied memory percentage. It is recommended to set the value between 30 and 90. A higher value results in longer update intervals and lower performance impact, while a lower value leads to shorter update intervals and higher performance impact.
 
-| Field Name   | Type | Description                                           |
-| -------- | -------- | ---------------------------------------------- |
-| model     | object   | Mode configuration.                                 |
-| inlineHook   | string   | Inline hook mode.                          |
+| Field Name | Type   | Description         |
+| ---------- | ------ | ------------------- |
+| model      | object | Mode configuration. |
+| inlineHook | string | Inline hook mode.   |
 
 - `model`Represents the mode configuration.
 - `inlineHook`By default, A1 Memory Management v4 uses[dobby](https://github.com/jmpews/Dobby)for modifying function addresses. If the hooking process is not working as expected, you can try modifying it to [And64InlineHook](https://github.com/Rprop/And64InlineHook).
@@ -303,13 +303,13 @@ To efficiently avoid performance impact caused by repetitive refreshing of memin
 
 A1 Memory Management v4 can enable app hibernation to reduce CPU and memory usage. Here is an example of the parameters used to control this behavior:
 
-| Field Name   | Type | Description                                           |
-| -------- | -------- | ---------------------------------------------- |
-| appSleep     | object   | App hibernation configuration.                               |
-| enable     | bool   | Indicates whether to enable app hibernation to reduce CPU and memory usage.                                 |
-| idle   | string   | User idle setting: "all" for all users, "current" for the current user (not applicable to multi-user environments).                          |
-| bg   | string   | Background app status setting: "ignore" to ignore wake-up and launch requests, "allow" to allow wake-up and launch requests, "deny" to deny wake-up and launch requests.                          |
-| top   | string   | Foreground app status setting: Same options as `bg`.                          |
+| Field Name | Type   | Description                                                                                                                                                              |
+| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| appSleep   | object | App hibernation configuration.                                                                                                                                           |
+| enable     | bool   | Indicates whether to enable app hibernation to reduce CPU and memory usage.                                                                                              |
+| idle       | string | User idle setting: "all" for all users, "current" for the current user (not applicable to multi-user environments).                                                      |
+| bg         | string | Background app status setting: "ignore" to ignore wake-up and launch requests, "allow" to allow wake-up and launch requests, "deny" to deny wake-up and launch requests. |
+| top        | string | Foreground app status setting: Same options as `bg`.                                                                                                                     |
 
 - `enable`: Set to true to enable app hibernation and reduce CPU and memory usage; set to false to disable it.
 - `idle`: User idle setting. Available values are "all" (all users) and "current" (the current user). Note that "current" setting does not apply in multi-user environments.
@@ -324,19 +324,19 @@ To meet the diverse needs of users, A1 Memory Management v4 already includes som
 KILL package_name:child_process_name
 ```
 
-| Field Name   | Type | Description                                           |
-| -------- | -------- | ---------------------------------------------- |
-| clever     | object   | Clever Mode configuration.                                 |
-| enable     | bool   | Indicates whether to enable Clever Mode.                                 |
+| Field Name | Type   | Description                              |
+| ---------- | ------ | ---------------------------------------- |
+| clever     | object | Clever Mode configuration.               |
+| enable     | bool   | Indicates whether to enable Clever Mode. |
 
 ## Crazy Kill
 
 The Crazy Kill feature utilizes kernel APIs to kill certain processes. Currently, the exact mechanism behind it is not clear, but it can effectively terminate specific processes. It is speculated that it may be based on the OOM (Out of Memory) score of the processes. Below is an example of the parameters used to control this behavior:
 
-| Field Name   | Type | Description                                           |
-| -------- | -------- | ---------------------------------------------- |
-| crazyKill    | object   | Crazy Kill configuration.                                 |
-| enable     | bool   | 	Indicates whether to enable Crazy Kill.                                 |
+| Field Name | Type   | Description                             |
+| ---------- | ------ | --------------------------------------- |
+| crazyKill  | object | Crazy Kill configuration.               |
+| enable     | bool   | Indicates whether to enable Crazy Kill. |
 
 ## Write Content to File
 
@@ -345,7 +345,7 @@ You can write content to files using A1 Memory Management v4. Below is an exampl
 ```json
 "file": {
     "write": [
-        {
+        {KV
             "path": "/proc/sys/fs/inotify/max_queued_events",
             "content": "102400"
         },
@@ -360,11 +360,11 @@ You can write content to files using A1 Memory Management v4. Below is an exampl
 
 In the above example, we write content to two files, enabling the inotify feature.
 
-| Field Name   | Type | Description                                           |
-| -------- | -------- | ---------------------------------------------- |
-| write     | array   | Write content to files.                                 |
-| path   | string   | File path.                          |
-| content   | string   | Content to write into the file.                          |
+| Field Name | Type   | Description                     |
+| ---------- | ------ | ------------------------------- |
+| write      | array  | Write content to files.         |
+| path       | string | File path.                      |
+| content    | string | Content to write into the file. |
 
 ### Restart the Phone or Terminate HC_memory Process to Apply Configuration Changes
 

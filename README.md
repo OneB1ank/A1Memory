@@ -40,10 +40,10 @@ The built-in configuration is suitable for most devices, but there are still som
 }
 ```
 
-| Field   | Type | Description                                           |
-| -------- | -------- | ---------------------------------------------- |
-| name     | string   | Name of the configuration file                                |
-| author   | string   | Author information of the configuration file                             |
+| Field  | Type   | Description                                  |
+| ------ | ------ | -------------------------------------------- |
+| name   | string | Name of the configuration file               |
+| author | string | Author information of the configuration file |
 
 The `name` and `author` are reflected in the logs in the following format:
 ```

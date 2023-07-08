@@ -18,7 +18,6 @@
 
 # 定义模块目录
 MODDIR="$(dirname "$0")"
-logfile_path=$(grep -A 1 '"log":' config/memory.json | grep '"path":' | awk -F'"path": "' '{print $2}' | awk -F'"' '{print $1}')
 
 # 等待设备完成引导
 while [ "$(getprop sys.boot_completed)" != "1" ]; do
@@ -33,18 +32,19 @@ until [ "$ac" = "false" ]; do
 done
 
 init() {
-    kill -9 $(ps -ef | grep 'lmkd' |grep -v 'grep' | awk '{print $1}')
-    sleep 5
     cd $MODDIR
-    rm -rf "$logfile_path"
+    logfile_path=$(grep -A 1 '"log":' config/memory.json | grep '"path":' | awk -F'"path": "' '{print $2}' | awk -F'"' '{print $1}')
 }
 
 memory() {
-    init
+    kill -9 $(ps -ef | grep 'lmkd' |grep -v 'grep' | awk '{print $1}')
+    sleep 5
+    rm -rf "$logfile_path"
     $MODDIR/HC_memory
     sleep 55
     memory
 }
 
+init
 # 执行 memory 函数
 memory
