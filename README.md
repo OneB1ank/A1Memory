@@ -9,7 +9,7 @@
 
 Third-party memory management running on Android can reduce the running memory used by applications.
 
-**Explanation**
+**Language**
 
 [English](README.md) | [中文](README-zh.md)
 
@@ -79,6 +79,9 @@ A: The occurrence of audio process being paused is rare. If it indeed happens, y
 
 Q: Not compatible with this platform: xxxx error when installing the module.
 A: Currently, the module only supports the arm-v8a platform and does not support other platforms temporarily.
+
+## download
+- [Go to Github to download](https://github.com/OneB1ank/A1Memory/releases)
 
 ## Acknowledgments
 

@@ -9,7 +9,7 @@
 
 运行在Android的第三方内存管理，可减少应用使用运行内存。
 
-**说明**
+**语言**
 
 [English](README.md) | [中文](README-zh.md)
 
@@ -79,6 +79,9 @@ A: 音频进程被暂停的情况很少发生，如果确实发生了，可以�
 
 Q: 安装模块时提示Not compatible with this platform: xxxx
 A: 目前模块仅支持arm-v8a平台，其他平台暂时不支持。
+
+## 下载
+- [前往Github下载](https://github.com/OneB1ank/A1Memory/releases)
 
 ## 致谢
 
