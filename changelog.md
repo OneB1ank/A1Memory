@@ -1,5 +1,9 @@
 # 【更新日志】
 
+## Beta4 2023.07.09
+- 修复休眠后无法唤醒的问题
+- 默认关闭疯狂杀戮
+
 ## Beta3 2023.07.08
 - 更改A1发送SIGKILL信号为SIGTERM
 - 内置com.android.shell白名单防止掉root

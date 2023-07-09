@@ -70,7 +70,7 @@
             "enable": true
         },
         "crazyKill": {
-            "enable": true
+            "enable": false
         }
     },
     "file": {

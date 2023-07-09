@@ -53,32 +53,33 @@ The `name` and `author` are reflected in the logs in the following format:
 - For more detailed instructions on the JSON configuration file, please refer to[here.](config/JSON-CONFIG.md)
 
 ## Frequently Asked Questions
-Q: Can it be used in conjunction with other memory optimization modules?
-A: A1 memory management works completely differently from other memory optimization methods, so using it together with other modules will only yield a cumulative effect of 1+1=2.
 
-Q: Does it consume power?
-A: Not at all. I spent a considerable amount of time optimizing the core code while developing the HAMv2 framework. It is implemented in low-level languages such as C/C++, resulting in minimal power consumption that can be completely ignored.
+Q：Can it be used in conjunction with other memory optimization modules?
+A：A1 memory management works completely differently from other memory optimization methods, so using it together with other modules will only yield a cumulative effect of 1+1=2.
 
-Q: Does it conflict with other Magisk modules or Xposed modules?
-A: It is highly unlikely to conflict with other modules. So far, no conflicts have been encountered with this module.
+Q：Does it consume power?
+A：Not at all. I spent a considerable amount of time optimizing the core code while developing the HAMv2 framework. It is implemented in low-level languages such as C/C++, resulting in minimal power consumption that can be completely ignored.
 
-Q: Does it cause power consumption during standby?
-A: The HAMv2 framework does not cause power consumption during standby, as the A1 memory management enters a sleep state when the device is in standby mode.
+Q：Does it conflict with other Magisk modules or Xposed modules?
+A：It is highly unlikely to conflict with other modules. So far, no conflicts have been encountered with this module.
 
-Q: Why is the background process still killed even after enabling the lmkd process kill prevention?
-A: This is because it only prevents lmkd from killing background processes and does not include the background process killing programs from various phone manufacturers.
+Q：Does it cause power consumption during standby?
+A：The HAMv2 framework does not cause power consumption during standby, as the A1 memory management enters a sleep state when the device is in standby mode.
 
-Q: How to configure the smart list?
-A: To configure the smart list, you need to add the rule "KILL package_name:subprocess_name" in the respective list. Before adding, make sure you understand the functionality and purpose of the subprocess to avoid any unexpected issues.
+Q：Why is the background process still killed even after enabling the lmkd process kill prevention?
+A：This is because it only prevents lmkd from killing background processes and does not include the background process killing programs from various phone manufacturers.
 
-Q: I'm encountering some strange issues. How can I resolve them?
-Q: Why does the device enter fb mode after a certain period of time?
-A: Most cases of this issue occur on Samsung devices when the hook to prevent lmkd process killing is enabled. This is likely the cause of the problem. Currently, there is no solution available, but you can try disabling the hook to prevent lmkd process killing to resolve it.
-Q: Why is the process playing audio being paused?
-A: The occurrence of audio process being paused is rare. If it indeed happens, you can add the process to the whitelist or disable the app hibernation feature. This will ensure continuous operation of the audio process without being paused.
+Q：How to configure the smart list?
+A：To configure the smart list, you need to add the rule "KILL package_name:subprocess_name" in the respective list. Before adding, make sure you understand the functionality and purpose of the subprocess to avoid any unexpected issues.
 
-Q: Not compatible with this platform: xxxx error when installing the module.
-A: Currently, the module only supports the arm-v8a platform and does not support other platforms temporarily.
+Q：I'm encountering some strange issues. How can I resolve them?
+Q：Why does the device enter fb mode after a certain period of time?
+A：Most cases of this issue occur on Samsung devices when the hook to prevent lmkd process killing is enabled. This is likely the cause of the problem. Currently, there is no solution available, but you can try disabling the hook to prevent lmkd process killing to resolve it.
+Q：Why is the process playing audio being paused?
+A：The occurrence of audio process being paused is rare. If it indeed happens, you can add the process to the whitelist or disable the app hibernation feature. This will ensure continuous operation of the audio process without being paused.
+
+Q：Not compatible with this platform: xxxx error when installing the module.
+A：Currently, the module only supports the arm-v8a platform and does not support other platforms temporarily.
 
 ## download
 - [Go to Github to download](https://github.com/OneB1ank/A1Memory/releases)
