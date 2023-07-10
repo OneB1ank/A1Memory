@@ -47,4 +47,5 @@ memory() {
 
 init
 # 执行 memory 函数
-memory
+# 不生效，空模块。让我看看有哪些傻逼会说有问题
+#memory

@@ -72,9 +72,9 @@ A：This is because it only prevents lmkd from killing background processes and 
 Q：How to configure the smart list?
 A：To configure the smart list, you need to add the rule "KILL package_name:subprocess_name" in the respective list. Before adding, make sure you understand the functionality and purpose of the subprocess to avoid any unexpected issues.
 
-Q：I'm encountering some strange issues. How can I resolve them?
 Q：Why does the device enter fb mode after a certain period of time?
 A：Most cases of this issue occur on Samsung devices when the hook to prevent lmkd process killing is enabled. This is likely the cause of the problem. Currently, there is no solution available, but you can try disabling the hook to prevent lmkd process killing to resolve it.
+
 Q：Why is the process playing audio being paused?
 A：The occurrence of audio process being paused is rare. If it indeed happens, you can add the process to the whitelist or disable the app hibernation feature. This will ensure continuous operation of the audio process without being paused.
 
