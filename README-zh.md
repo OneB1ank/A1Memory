@@ -13,14 +13,14 @@
 
 [English](README.md) | [中文](README-zh.md)
 
-## 重要功能
+## ✨重要功能
 - 管理后台进程存活和死亡
 - 指定释放后台应用子进程
 - 阻止Low Memory Killer Daemon杀后台
 - 自动释放非常用内存
 - 让应用休眠减少CPU和内存使用
 
-## 说明
+## 💡说明
 - 该模块只支持Android8 ~ 13，平台仅支持arm64-v8a
 - Magisk不低于20.4+，ksu大部分可兼容
 - 该模块不会与其他模块产生任何冲突
@@ -29,7 +29,7 @@
 ![列表图片](image/list.jpg)
 - 名单列表：/sdcard/Android/HChai/HC_memory/名单列表.conf
 
-## 自定义配置
+## 📝自定义配置
 自带配置适用于绝大多数设备，但还是有一些设备不适用默认配置，因此开放更多内置可调参数。在设计HAMv2框架时遍已经考虑到该需求，绝大多数的参数都可自定义调整，而且此项目可嵌入到其他模块中运行。Json配置文件位于['/data/adb/modules/Hc_memory/config/memory.json']
 
 ### 项目信息
@@ -52,7 +52,7 @@
 
 - 更详细的json配置文件说明请参考[这里](config/JSON-CONFIG-zh.md)
 
-## 常见问题
+## 🔍常见问题
 
 Q：可以搭配其他内存优化模块吗？
 A：A1内存管理与其他内存优化原理完全不同，因此搭配其他模块效果只会是1+1=2。
@@ -81,10 +81,20 @@ A：音频进程被暂停的情况很少发生，如果确实发生了，可以�
 Q：安装模块时提示Not compatible with this platform: xxxx
 A：目前模块仅支持arm-v8a平台，其他平台暂时不支持。
 
-## 下载
+## 🚀下载
 - [前往Github下载](https://github.com/OneB1ank/A1Memory/releases)
 
-## 致谢
+## 🌟收藏趋势
+
+<a href="https://star-history.com/#OneB1ank/A1Memory&Timeline">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=OneB1ank/A1Memory&type=Timeline&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=OneB1ank/A1Memory&type=Timeline" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=OneB1ank/A1Memory&type=Timeline" />
+  </picture>
+</a>
+
+## 🙏致谢
 
 感谢以下用户或项目的源码对本项目的帮助：  
 - [@yc9559](https://github.com/yc9559)
@@ -93,7 +103,7 @@ A：目前模块仅支持arm-v8a平台，其他平台暂时不支持。
 感谢以下用户的测试反馈和错误定位：
 - @火機(coolapk)
 
-## 捐赠支持
+## 🎉捐赠支持
 如何你觉得这个模块很好用，可以捐赠来支持我
 - [爱发电](https://afdian.net/a/HCha1)
 - [patreon](https://patreon.com/A1memory)

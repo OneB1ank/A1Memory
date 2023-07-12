@@ -47,5 +47,11 @@ This repository incorporates components from the following projects:
    - Copyright: SsageParuders
    - Other relevant information: Please refer to the Android_Native_Surface project for additional details and acknowledgments.
 
+8. FTXUI (https://github.com/ArthurSonzogni/FTXUI): 💻 C++ Functional Terminal User Interface. ❤️
+
+   - License: MIT License (https://github.com/ArthurSonzogni/FTXUI/blob/main/LICENSE)
+   - Copyright: ArthurSonzogni
+   - Other relevant information: Please refer to the FTXUI project for additional details and acknowledgments.
+
 Please refer to the individual components' licenses and original sources for more detailed information.
 The licenses and copyright notices for each component can be found in their respective source code files or accompanying documentation.

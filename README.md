@@ -13,14 +13,14 @@ Third-party memory management running on Android can reduce the running memory u
 
 [English](README.md) | [中文](README-zh.md)
 
-## important function
+## ✨important function
 - Managing the survival and termination of background processes
 - Specifying the release of background application child processes
 - Preventing Low Memory Killer Daemon from killing background processes
 - Automatically releasing non-essential memory
 - Putting applications to sleep to reduce CPU and memory usage
 
-## Description
+## 💡Description
 - This module only supports Android 8 to 13, and the platform is limited to arm64-v8a.
 - Magisk version should be 20.4+ and ksu is mostly compatible.
 - This module will not conflict with any other modules.
@@ -29,7 +29,7 @@ Third-party memory management running on Android can reduce the running memory u
 ![列表图片](image/list.jpg)
 - List File: /sdcard/Android/HChai/HC_memory/名单列表.conf
 
-## Custom Configuration
+## 📝Custom Configuration
 The built-in configuration is suitable for most devices, but there are still some devices that may not work with the default configuration. Therefore, more adjustable parameters are provided. This requirement was already taken into consideration when designing the HAMv2 framework, and most parameters can be customized and adjusted. Moreover, this project can be embedded and run within other modules. The JSON configuration file is located at ['/data/adb/modules/Hc_memory/config/memory.json'].
 
 ### Project Information
@@ -52,7 +52,7 @@ The `name` and `author` are reflected in the logs in the following format:
 
 - For more detailed instructions on the JSON configuration file, please refer to[here.](config/JSON-CONFIG.md)
 
-## Frequently Asked Questions
+## 🔍Frequently Asked Questions
 
 Q：Can it be used in conjunction with other memory optimization modules?
 A：A1 memory management works completely differently from other memory optimization methods, so using it together with other modules will only yield a cumulative effect of 1+1=2.
@@ -81,10 +81,20 @@ A：The occurrence of audio process being paused is rare. If it indeed happens, 
 Q：Not compatible with this platform: xxxx error when installing the module.
 A：Currently, the module only supports the arm-v8a platform and does not support other platforms temporarily.
 
-## download
+## 🚀download
 - [Go to Github to download](https://github.com/OneB1ank/A1Memory/releases)
 
-## Acknowledgments
+## 🌟Star History
+
+<a href="https://star-history.com/#OneB1ank/A1Memory&Timeline">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=OneB1ank/A1Memory&type=Timeline&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=OneB1ank/A1Memory&type=Timeline" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=OneB1ank/A1Memory&type=Timeline" />
+  </picture>
+</a>
+
+## 🙏Acknowledgments
 
 Thanks to the following users or projects for their source code contributions to this project:  
 - [@yc9559](https://github.com/yc9559)
@@ -93,7 +103,7 @@ Thanks to the following users or projects for their source code contributions to
 Thanks to the following users for their testing feedback and bug identification:
 - @火機(coolapk)
 
-## Support Donations
+## 🎉Support Donations
 If you find this module useful, you can make a donation to support me.
 - [爱发电](https://afdian.net/a/HCha1)
 - [patreon](https://patreon.com/A1memory)
