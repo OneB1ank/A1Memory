@@ -38,8 +38,8 @@
             }
         },
         "initInjection": {
-            "enable": true,
-            "processName": "/bin/lmkd",
+            "enable": false,
+            "processName": "/system/bin/lmkd",
             "symbolsFunc": "hc_hook",
             "libraryPath": "/data/adb/modules/Hc_memory/lib/arm64-v8a/libhook_lmkd.so",
             "lmkd": {
@@ -61,7 +61,7 @@
             }
         },
         "appSleep": {
-            "enable": true,
+            "enable": false,
             "idle": "current",
             "bg": "ignore",
             "top": "allow"
