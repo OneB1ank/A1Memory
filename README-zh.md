@@ -11,7 +11,7 @@
 
 **语言**
 
-[English](README.md) | [中文](README-zh.md)
+[English](README.md) | [中文](README-zh.md) | [Русский язык](README-ru.md)
 
 ## ✨重要功能
 - 管理后台进程存活和死亡

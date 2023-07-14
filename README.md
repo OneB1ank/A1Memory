@@ -11,7 +11,7 @@ Third-party memory management running on Android can reduce the running memory u
 
 **Language**
 
-[English](README.md) | [中文](README-zh.md)
+[English](README.md) | [中文](README-zh.md) | [Русский язык](README-ru.md)
 
 ## ✨important function
 - Managing the survival and termination of background processes
