@@ -28,7 +28,7 @@ done
 ac=null
 until [ "$ac" = "false" ]; do
 	ac=$(/system/bin/app_process -Djava.class.path="$MODDIR/compilations.dex" /system/bin com.rosan.shell.ActiviteJava)
-	sleep 5
+	sleep 10
 done
 
 init() {
@@ -37,8 +37,10 @@ init() {
 }
 
 memory() {
-    kill -9 $(ps -ef | grep 'lmkd' |grep -v 'grep' | awk '{print $1}')
+    lmkd=$(ps -ef | grep '/system/bin/lmkd' |grep -v 'grep' | awk '{print $1}')
+    kill -9 $lmkd
     sleep 5
+    renice -n -19 -p $lmkd
     rm -rf "$logfile_path"
     $MODDIR/HC_memory
     sleep 55
