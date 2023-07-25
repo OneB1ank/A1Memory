@@ -1,0 +1,14 @@
+{
+    "project": {
+        "name": "中文",
+        "author": "HChai"
+    },
+    "htop": {
+        "title": "主页",
+        "ram": "内存 [%]",
+        "ram_usage": "物理内存使用率",
+        "swap_usage": "虚拟内存使用率",
+        "network": "网络 [MiB/s] [上/下]",
+        "cpu_usage": "CPU 总使用率: "
+    }
+}

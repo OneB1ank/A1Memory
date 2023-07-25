@@ -52,7 +52,7 @@
                     "pidfd_send_signal": true,
                     "__android_log_print": false,
                     "meminfo": {
-                        "updateTime": 60
+                        "updateTime": 30
                     }
                 },
                 "model": {

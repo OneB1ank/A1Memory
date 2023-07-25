@@ -16,6 +16,8 @@
 #
 
 config_path="/sdcard/Android/HChai/HC_memory"
+module_path="/data/adb/modules/Hc_memory"
+
 if [ "$ARCH" != "arm64" ]; then
   abort "Not compatible with this platform: $ARCH"
 else
@@ -38,7 +40,9 @@ modify() {
 config() {
     [ ! -d "$config_path" ] && mkdir -p "$config_path"
     [ ! -f "$config_path/名单列表.conf" ] && cp "$MODPATH/config/HC_memory/名单列表.conf" "$config_path"
-    rm "$MODPATH/config/HC_memory"
+    rm -rf "$MODPATH/config/HC_memory"
+    [ -f "$module_path/config/memory.json" ] && cp "$module_path/config/memory.json" "$MODPATH/config/memory.json"
+    cp "$MODPATH/system/bin/amui" "$config_path/终端.sh"
     ui_print "- update configuration"
 }
 

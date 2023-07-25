@@ -1,0 +1,24 @@
+#!/system/bin/sh
+#
+#Copyright (C) 2022-2023 OneB1ank
+#
+#This program is free module: you can redistribute it and/or modify
+#it under the terms of the GNU General Public License as published by
+#the Free Software Foundation, either version 3 of the License, or
+#(at your option) any later version.
+#
+#This program is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#GNU General Public License for more details.
+#
+#You should have received a copy of the GNU General Public License
+#along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+
+if [ "$(id -u)" != 0 ]; then
+    echo "正在获取root权限"
+    exec su -c sh "$0" "$@"
+else
+    UI_memory
+fi
