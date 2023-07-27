@@ -20,5 +20,6 @@ if [ "$(id -u)" != 0 ]; then
     echo "正在获取root权限"
     exec su -c sh "$0" "$@"
 else
+    kill -9 $(ps -ef | grep 'UI_memory' |grep -v 'grep' | awk '{print $2}') >/dev/null 2>&1
     UI_memory
 fi
