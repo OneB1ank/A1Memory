@@ -34,6 +34,10 @@ done
 init() {
     cd $MODDIR
     logfile_path=$(grep -A 1 '"log":' config/memory.json | grep '"path":' | awk -F'"path": "' '{print $2}' | awk -F'"' '{print $1}')
+    # logfile如果为空
+    if [ -z "$logfile_path" ]; then
+        logfile_path=$(grep -A 2 '"log":' config/memory.json | grep '"path":' | awk -F'"path": "' '{print $2}' | awk -F'"' '{print $1}')
+    fi
 }
 
 memory() {
