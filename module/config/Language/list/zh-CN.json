@@ -16,7 +16,7 @@
             "CutMemoryFreed": "内存释放",
             "appSleep": "应用休眠",
             "crazyKill": "狂杀进程",
-            "injection": "注入保活",
+            "injection": "阻止lmkd",
             "memThreshold": "内存阈值"
         },
         "numerical_parameter": {
@@ -27,11 +27,12 @@
     },
     "other": {
         "save": "[保存]",
+        "quit": "[退出]",
         "teffect": "[立刻生效]",
-        "quit": "[退出]"
+        "join": "[加入TG频道]"
     },
     "tag": {
-        "content": "请关闭ui避免造成意外的后台耗电，使用UI一定要退出，UI关闭后该消息不会再弹出。",
-        "title": "请关闭内存管理UI，进程：UI_memory"
+        "content": "请关闭内存管理UI避免造成意外的后台耗电，使用UI保存配置后一定要退出。",
+        "title": "请保存配置后重启手机，进程：UI_memory"
     }
 }

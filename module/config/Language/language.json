@@ -1,0 +1,20 @@
+{
+    "language": [
+        {
+            "name": "简体中文",
+            "path": "/data/adb/modules/Hc_memory/config/Language/list/zh-CN.json"
+        },
+        {
+            "name": "English",
+            "path": "/data/adb/modules/Hc_memory/config/Language/list/en-US.json"
+        },
+        {
+            "name": "Русский язык",
+            "path": "/data/adb/modules/Hc_memory/config/Language/list/ru-RU.json"
+        },
+        {
+            "name": "Deutsch",
+            "path": "/data/adb/modules/Hc_memory/config/Language/list/de-DE.json"
+        }
+    ]
+}

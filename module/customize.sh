@@ -15,8 +15,14 @@
 #along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 
-config_path="/sdcard/Android/HChai/HC_memory"
-module_path="/data/adb/modules/Hc_memory"
+CONFIG_PATH="/sdcard/Android/HChai/HC_memory"
+MODULE_PATH="/data/adb/modules/Hc_memory"
+LANGUAGE_PATH="$MODPATH/config/Language"
+LANGUAGE_PATH_MODULE="$MODULE_PATH/config/Language"
+LOCALE=`getprop persist.sys.locale`
+LOCALE_JSON_PATH="$LANGUAGE_PATH/list/${LOCALE}.json"
+LOCALE_JSON_PATH_MODULE="$LANGUAGE_PATH_MODULE/list/${LOCALE}.json"
+
 
 if [ "$ARCH" != "arm64" ]; then
   abort "Not compatible with this platform: $ARCH"
@@ -38,12 +44,18 @@ modify() {
 }
 
 config() {
-    [ ! -d "$config_path" ] && mkdir -p "$config_path"
-    [ ! -f "$config_path/名单列表.conf" ] && cp "$MODPATH/config/HC_memory/名单列表.conf" "$config_path"
+    [ ! -d "$CONFIG_PATH" ] && mkdir -p "$CONFIG_PATH"
+    [ ! -f "$CONFIG_PATH/名单列表.conf" ] && cp "$MODPATH/config/HC_memory/名单列表.conf" "$CONFIG_PATH"
     rm -rf "$MODPATH/config/HC_memory"
-    [ -f "$module_path/config/memory.json" ] && cp "$module_path/config/memory.json" "$MODPATH/config/memory.json"
-    cp "$MODPATH/system/bin/amui" "$config_path/终端.sh"
+    [ -f "$MODULE_PATH/config/memory.json" ] && cp "$MODULE_PATH/config/memory.json" "$MODPATH/config/memory.json"
+    cp "$MODPATH/system/bin/amui" "$CONFIG_PATH/terminal.sh"
     ui_print "- update configuration"
+    if [ -f "${LOCALE_JSON_PATH}" ]; then
+        echo "${LOCALE_JSON_PATH_MODULE}" > "$LANGUAGE_PATH/lg.txt"
+    else
+        echo "$LANGUAGE_PATH_MODULE/list/en-US.json" > "$LANGUAGE_PATH/lg.txt"
+    fi
+    ui_print "- update language"
 }
 
 modify

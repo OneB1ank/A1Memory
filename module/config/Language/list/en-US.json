@@ -1,0 +1,38 @@
+{
+    "htop": {
+        "cpu_usage": "Total CPU usage: ",
+        "network": "Network [MiB/s] [Up/Down]",
+        "ram": "Memory [%]",
+        "ram_usage": "Physical memory usage",
+        "swap_usage": "Virtual memory usage",
+        "title": "Home"
+    },
+    "fswitch": {
+        "title": "Functions",
+        "function_switch": {
+            "title": "Function switches",
+            "clever": "Clever mode",
+            "a1Memory": "A1 memory management",
+            "CutMemoryFreed": "Memory release",
+            "appSleep": "App sleep",
+            "crazyKill": "Process killing",
+            "injection": "Injection to lmkd",
+            "memThreshold": "Memory threshold"
+        },
+        "numerical_parameter": {
+            "title": "Numerical parameters",
+            "memThreshold_value": "Threshold: ",
+            "memThreshold_slider": "Threshold slider"
+        }
+    },
+    "other": {
+        "save": "[Save]",
+        "quit": "[Quit]",
+        "teffect": "[Apply immediately]",
+        "join": "[Join TG channel]"
+    },
+    "tag": {
+        "content": "Please close the memory management UI to avoid unnecessary battery consumption. After saving the configuration in the UI, be sure to exit.",
+        "title": "Please save the configuration and restart the phone, process: UI_memory"
+    }
+}

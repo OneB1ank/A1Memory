@@ -1,0 +1,38 @@
+{
+    "htop": {
+        "cpu_usage": "Gesamte CPU-Auslastung: ",
+        "network": "Netzwerk [MiB/s] [Hoch/Runter]",
+        "ram": "Speicher [%]",
+        "ram_usage": "Physische Speicherauslastung",
+        "swap_usage": "Virtuelle Speicherauslastung",
+        "title": "Startseite"
+    },
+    "fswitch": {
+        "title": "Funktionen",
+        "function_switch": {
+            "title": "Funktionsumschalter",
+            "clever": "Clever-Modus",
+            "a1Memory": "A1-Speicherverwaltung",
+            "CutMemoryFreed": "Speicherfreigabe",
+            "appSleep": "App-Schlaf",
+            "crazyKill": "Prozessbeendigung",
+            "injection": "Injektion in Aktivität",
+            "memThreshold": "Speicherschwelle"
+        },
+        "numerical_parameter": {
+            "title": "Numerische Parameter",
+            "memThreshold_value": "Schwelle: ",
+            "memThreshold_slider": "Schwellen-Schieberegler"
+        }
+    },
+    "other": {
+        "save": "[Speichern]",
+        "quit": "[Beenden]",
+        "teffect": "[Sofort anwenden]",
+        "join": "[TG-Kanal beitreten]"
+    },
+    "tag": {
+        "content": "Bitte schließen Sie die Memory-Management-Benutzeroberfläche, um unnötigen Batterieverbrauch zu vermeiden. Nach dem Speichern der Konfiguration in der Benutzeroberfläche sollten Sie diese unbedingt beenden.",
+        "title": "Bitte speichern Sie die Konfiguration und starten Sie das Telefon neu, Prozess: UI_memory"
+    }
+}
