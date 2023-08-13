@@ -1,0 +1,38 @@
+{
+    "htop": {
+        "cpu_usage": "Uso total de CPU: ",
+        "network": "Red [MiB/s] [Subir/Descargar]",
+        "ram": "Memoria [%]",
+        "ram_usage": "Uso de memoria física",
+        "swap_usage": "Uso de memoria virtual",
+        "title": "Inicio"
+    },
+    "fswitch": {
+        "title": "Función",
+        "function_switch": {
+            "title": "Interruptor de función",
+            "clever": "Modo astuto",
+            "a1Memory": "Gestión de memoria A1",
+            "CutMemoryFreed": "Liberación de memoria",
+            "appSleep": "Hibernación de aplicación",
+            "crazyKill": "Proceso de eliminación masiva",
+            "injection": "Prevenir lmkd",
+            "memThreshold": "Umbral de memoria"
+        },
+        "numerical_parameter": {
+            "title": "Parámetros numéricos",
+            "memThreshold_value": "Umbral: ",
+            "memThreshold_slider": "Deslizador de umbral"
+        }
+    },
+    "other": {
+        "save": "[Guardar]",
+        "quit": "[Salir]",
+        "teffect": "[Aplicar ahora]",
+        "join": "[Unirse al canal TG]"
+    },
+    "tag": {
+        "content": "Por favor, cierre la interfaz de gestión de memoria para evitar un consumo innecesario de energía en segundo plano. Una vez que haya guardado la configuración en la interfaz, salga.",
+        "title": "Por favor, guarde la configuración y reinicie el teléfono. Proceso: UI_memory"
+    }
+}

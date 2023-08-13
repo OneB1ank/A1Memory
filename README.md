@@ -1,17 +1,14 @@
-# A1 memory management
-
-[![](https://img.shields.io/badge/-C-black?logo=c&style=flat-square&logoColor=ffffff)](http://cppmicroservices.org/)
-[![](https://img.shields.io/badge/-C++-808080?logo=c%2B%2B&style=flat-square&logoColor=ffffff)](http://cppmicroservices.org/)
-[![](https://img.shields.io/badge/-Bash-ae9a5a?style=flat-square&logo=shell&logoColor=ffffff)](https://www.python.org/)
-![](https://img.shields.io/badge/Android%208~13-Support-green)
-![](https://img.shields.io/badge/arm64--v8a-Support-green)
-[![Join Telegram Channel](https://img.shields.io/badge/Join%20group-Telegram-brightgreen.svg)](https://t.me/HCha1234)
-
-Third-party memory management running on Android can reduce the running memory used by applications.
-
-**Language**
-
-[English](README.md) | [中文](README-zh.md) | [Русский язык](README-ru.md)
+<div align="center">
+<h1>A1 memory management</h1>
+<a href="http://cppmicroservices.org/"><img alt="C Language" src="https://img.shields.io/badge/-C-black?logo=c&style=flat-square&logoColor=ffffff"></a>
+<a href="http://cppmicroservices.org/"><img alt="C++ Language" src="https://img.shields.io/badge/-C++-808080?logo=c%2B%2B&style=flat-square&logoColor=ffffff"></a>
+<a href="https://www.python.org/"><img alt="Bash Shell" src="https://img.shields.io/badge/-Bash-ae9a5a?style=flat-square&logo=shell&logoColor=ffffff"></a>
+<img alt="Android Support" src="https://img.shields.io/badge/Android%208~13-Support-green">
+<img alt="arm64-v8a Support" src="https://img.shields.io/badge/arm64--v8a-Support-green">
+<a href="https://t.me/HCha1234"><img alt="Join Telegram Channel" src="https://img.shields.io/badge/Join%20group-Telegram-brightgreen.svg?logo=telegram"></a>
+<p><b><a href="README.md">English</a> | <a href="README-zh.md">简体中文</a> | <a href="README-ru.md">Русский</a></b></p>
+<p>Third-party memory management running on Android can reduce the running memory used by applications.</p>
+</div>
 
 ## ✨important function
 - Managing the survival and termination of background processes

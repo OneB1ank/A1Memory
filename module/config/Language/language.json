@@ -9,12 +9,16 @@
             "path": "/data/adb/modules/Hc_memory/config/Language/list/en-US.json"
         },
         {
-            "name": "Русский язык",
+            "name": "Русский",
             "path": "/data/adb/modules/Hc_memory/config/Language/list/ru-RU.json"
         },
         {
             "name": "Deutsch",
             "path": "/data/adb/modules/Hc_memory/config/Language/list/de-DE.json"
+        },
+        {
+            "name": "Español",
+            "path": "/data/adb/modules/Hc_memory/config/Language/list/es-ES.json"
         }
     ]
 }

@@ -24,13 +24,6 @@ while [ "$(getprop sys.boot_completed)" != "1" ]; do
     sleep 5
 done
 
-# 等待 rosan 检测屏幕
-ac=null
-until [ "$ac" = "false" ]; do
-	ac=$(/system/bin/app_process -Djava.class.path="$MODDIR/compilations.dex" /system/bin com.rosan.shell.ActiviteJava)
-	sleep 10
-done
-
 init() {
     cd $MODDIR
     logfile_path=$(grep -A 1 '"log":' config/memory.json | grep '"path":' | awk -F'"path": "' '{print $2}' | awk -F'"' '{print $1}')

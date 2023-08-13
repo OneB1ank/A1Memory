@@ -23,13 +23,6 @@ LOCALE=`getprop persist.sys.locale`
 LOCALE_JSON_PATH="$LANGUAGE_PATH/list/${LOCALE}.json"
 LOCALE_JSON_PATH_MODULE="$LANGUAGE_PATH_MODULE/list/${LOCALE}.json"
 
-
-if [ "$ARCH" != "arm64" ]; then
-  abort "Not compatible with this platform: $ARCH"
-else
-  ui_print "- Your platform can use A1 Memory"
-fi
-
 modify() {
     #焕晨提供
     device_config set_sync_disabled_for_tests persistent
@@ -58,8 +51,21 @@ config() {
     ui_print "- update language"
 }
 
-modify
-config
+xp() {
+    pm install -r "$MODPATH/app/app-release.apk"
+    rm -rf "$MODPATH/app/app-release.apk"
+    ui_print "- install com.hchai.rescueplan"
+}
+
+if [ "$ARCH" != "arm64" ]; then
+  abort "Not compatible with this platform: $ARCH"
+else
+  ui_print "- Your platform can use A1 Memory"
+  modify
+  config
+  xp
+fi
+
 set_perm_recursive "$MODPATH" 0 0 0755 0777
 
 ui_print "- Restart and enjoy A1 Memory immediately"
