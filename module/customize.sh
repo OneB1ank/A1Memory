@@ -23,19 +23,6 @@ LOCALE=`getprop persist.sys.locale`
 LOCALE_JSON_PATH="$LANGUAGE_PATH/list/${LOCALE}.json"
 LOCALE_JSON_PATH_MODULE="$LANGUAGE_PATH_MODULE/list/${LOCALE}.json"
 
-modify() {
-    #焕晨提供
-    device_config set_sync_disabled_for_tests persistent
-    device_config put activity_manager max_cached_processes 2147483647
-    device_config put activity_manager max_phantom_processes 2147483647
-    settings put global activity_manager_constants max_cached_processes=2147483647
-    settings put global activity_manager_constants max_phantom_processes=2147483647
-
-    #虚进程
-    settings put global settings_enable_monitor_phantom_procs false
-    ui_print "- modify settings."
-}
-
 config() {
     [ ! -d "$CONFIG_PATH" ] && mkdir -p "$CONFIG_PATH"
     [ ! -f "$CONFIG_PATH/名单列表.conf" ] && cp "$MODPATH/config/HC_memory/名单列表.conf" "$CONFIG_PATH"
@@ -53,7 +40,7 @@ config() {
 
 xp() {
     pm install -r "$MODPATH/app/app-release.apk"
-    rm -rf "$MODPATH/app/app-release.apk"
+    rm -rf "$MODPATH/app"
     ui_print "- install com.hchai.rescueplan"
 }
 
@@ -61,7 +48,6 @@ if [ "$ARCH" != "arm64" ]; then
   abort "Not compatible with this platform: $ARCH"
 else
   ui_print "- Your platform can use A1 Memory"
-  modify
   config
   xp
 fi

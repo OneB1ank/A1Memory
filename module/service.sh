@@ -26,18 +26,20 @@ done
 
 init() {
     cd $MODDIR
-    logfile_path=$(grep -A 1 '"log":' config/memory.json | grep '"path":' | awk -F'"path": "' '{print $2}' | awk -F'"' '{print $1}')
-    # logfile如果为空
-    if [ -z "$logfile_path" ]; then
-        logfile_path=$(grep -A 2 '"log":' config/memory.json | grep '"path":' | awk -F'"path": "' '{print $2}' | awk -F'"' '{print $1}')
-    fi
+    local linesAfter=1
+    while true; do
+        logfile_path=$(grep -A $linesAfter '"log":' config/memory.json | awk -F'"path": "' '/"path":/ {print $2}' | awk -F'"' '{print $1}')
+        [ -n "$logfile_path" ] || [ $linesAfter -gt 10 ] && break
+        ((linesAfter++))
+    done
 }
 
 memory() {
-    lmkd=$(ps -ef | grep '/system/bin/lmkd' |grep -v 'grep' | awk '{print $1}')
-    kill -9 $lmkd
+    lmkd_pid=$(ps -ef | grep '/system/bin/lmkd' | grep -v 'grep' | awk '{print $1}')
+    kill -9 $lmkd_pid
     sleep 5
-    renice -n -19 -p $lmkd
+    lmkd_pid=$(ps -ef | grep '/system/bin/lmkd' | grep -v 'grep' | awk '{print $1}')
+    renice -n -19 -p $lmkd_pid
     rm -rf "$logfile_path"
     $MODDIR/HC_memory
     sleep 55
@@ -45,5 +47,4 @@ memory() {
 }
 
 init
-# 执行 memory 函数
 memory
