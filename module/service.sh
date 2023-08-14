@@ -24,23 +24,60 @@ while [ "$(getprop sys.boot_completed)" != "1" ]; do
     sleep 5
 done
 
+adjustPermissions() {
+    local dir="$1"
+    local perms=$(stat -c %A "$dir")
+    local owner_read_perm=${perms:1:1}
+    local owner_write_perm=${perms:2:1}
+    local group_read_perm=${perms:4:1}
+    local group_write_perm=${perms:5:1}
+    local other_read_perm=${perms:7:1}
+    local other_write_perm=${perms:8:1}
+
+    # 根据检测到的权限，为所有者、用户组和其他用户逐一添加缺失的权限
+    if [ "$owner_read_perm" != "r" ]; then
+        chmod u+r "$dir"
+    fi
+
+    if [ "$owner_write_perm" != "w" ]; then
+        chmod u+w "$dir"
+    fi
+
+    if [ "$group_read_perm" != "r" ]; then
+        chmod g+r "$dir"
+    fi
+
+    if [ "$group_write_perm" != "w" ]; then
+        chmod g+w "$dir"
+    fi
+
+    if [ "$other_read_perm" != "r" ]; then
+        chmod o+r "$dir"
+    fi
+
+    if [ "$other_write_perm" != "w" ]; then
+        chmod o+w "$dir"
+    fi
+}
+
 init() {
     cd $MODDIR
-    local linesAfter=1
-    while true; do
-        logfile_path=$(grep -A $linesAfter '"log":' config/memory.json | awk -F'"path": "' '/"path":/ {print $2}' | awk -F'"' '{print $1}')
-        [ -n "$logfile_path" ] || [ $linesAfter -gt 10 ] && break
-        ((linesAfter++))
-    done
+    logfile_path=$(grep -A 1 '"log":' config/memory.json | grep '"path":' | awk -F'"path": "' '{print $2}' | awk -F'"' '{print $1}')
+    # logfile如果为空
+    if [ -z "$logfile_path" ]; then
+        logfile_path=$(grep -A 2 '"log":' config/memory.json | grep '"path":' | awk -F'"path": "' '{print $2}' | awk -F'"' '{print $1}')
+    fi
 }
 
 memory() {
+    adjustPermissions "/data/media/0/Android/HChai/HC_memory"
     lmkd_pid=$(ps -ef | grep '/system/bin/lmkd' | grep -v 'grep' | awk '{print $1}')
     kill -9 $lmkd_pid
     sleep 5
     lmkd_pid=$(ps -ef | grep '/system/bin/lmkd' | grep -v 'grep' | awk '{print $1}')
     renice -n -19 -p $lmkd_pid
     rm -rf "$logfile_path"
+    touch "$logfile_path"
     $MODDIR/HC_memory
     sleep 55
     memory
