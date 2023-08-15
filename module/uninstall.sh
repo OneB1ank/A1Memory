@@ -18,3 +18,4 @@
 rm -rf /sdcard/Android/HChai/HC_memory
 rm -rf /data/HC_memory
 rm -rf /data/HC_language
+pm uninstall com.hchai.rescueplan
