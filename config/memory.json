@@ -45,7 +45,7 @@
             "lmkd": {
                 "memThreshold": {
                     "enable": true,
-                    "value": 90
+                    "value": 85
                 },
                 "hookFunc": {
                     "kill": true,
