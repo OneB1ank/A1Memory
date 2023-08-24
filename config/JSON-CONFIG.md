@@ -48,7 +48,7 @@ Logging Runtime Logs for A1 Memory Management v4, which can be Adjusted by Modif
 | Field Name | Type   | Description                                                           |
 | ---------- | ------ | --------------------------------------------------------------------- |
 | path       | string | The path to the log file.                                             |
-| level      | string | The log level. Available options: debug, info, warn, error, critical. |
+| level      | string | The log level. Available options: debug, info, warn, err, critical. |
 
 If you wish to disable logging, you can set the log level to "critical". Alternatively, if you only want to view logs related to runtime errors, you can set the log level to "warn".
 

@@ -48,7 +48,7 @@ WHITE 包名
 | 字段名 | 类型   | 描述                                                 |
 | ------ | ------ | ---------------------------------------------------- |
 | path   | string | 日志路径                                             |
-| level  | string | 日志级别，可选项：debug, info, warn, error, critical |
+| level  | string | 日志级别，可选项：debug, info, warn, err, critical |
 
 如果你想要关闭日志，可以将日志级别设置为critical，或者您只想查看运行错误的日志可以设置为warn。
 
