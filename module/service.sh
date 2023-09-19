@@ -21,7 +21,7 @@ MODDIR="$(dirname "$0")"
 
 # 等待设备完成引导
 while [ "$(getprop sys.boot_completed)" != "1" ]; do
-    sleep 5
+    sleep 10
 done
 
 adjustPermissions() {
@@ -75,7 +75,6 @@ memory() {
     kill -9 $lmkd_pid
     sleep 5
     lmkd_pid=$(ps -ef | grep '/system/bin/lmkd' | grep -v 'grep' | awk '{print $1}')
-    renice -n -19 -p $lmkd_pid
     rm -rf "$logfile_path"
     touch "$logfile_path"
     $MODDIR/HC_memory
