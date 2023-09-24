@@ -18,7 +18,7 @@
 - Putting applications to sleep to reduce CPU and memory usage
 
 ## 💡Description
-- This module only supports Android 8 to 13, and the platform is limited to arm64-v8a.
+- This module only supports Android 8 to 14, and the platform is limited to arm64-v8a.
 - Magisk version should be 20.4+ and ksu is mostly compatible.
 - This module will not conflict with any other modules.
 

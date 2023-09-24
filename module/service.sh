@@ -71,14 +71,10 @@ init() {
 
 memory() {
     adjustPermissions "/data/media/0/Android/HChai/HC_memory"
-    lmkd_pid=$(ps -ef | grep '/system/bin/lmkd' | grep -v 'grep' | awk '{print $1}')
-    kill -9 $lmkd_pid
-    sleep 5
-    lmkd_pid=$(ps -ef | grep '/system/bin/lmkd' | grep -v 'grep' | awk '{print $1}')
     rm -rf "$logfile_path"
     touch "$logfile_path"
     $MODDIR/HC_memory
-    sleep 55
+    sleep 60
     memory
 }
 
