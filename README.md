@@ -28,7 +28,7 @@
 
 ## 📱Terminal UI
 Custom toggle functionality, only supports simple feature toggling. For more detailed parameter configurations, please see 📝 Custom Configuration.
-![UI图片](image/UI.jpg)
+![UI图片](image/ui.jpg)
 How to access the Terminal UI interface?
 - You can use the `amui` command in Termux or execute /sdcard/Android/HChai/HC_memory/`terminal.sh` in the mt manager.
 
