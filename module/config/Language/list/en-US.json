@@ -29,7 +29,8 @@
         "save": "[Save]",
         "quit": "[Quit]",
         "teffect": "[Apply immediately]",
-        "join": "[Join TG channel]"
+        "join": "[Join TG channel]",
+        "github": "[GitHub Project]"
     },
     "tag": {
         "content": "Please close the memory management UI to avoid unnecessary battery consumption. After saving the configuration in the UI, be sure to exit.",

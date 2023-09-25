@@ -29,7 +29,8 @@
         "save": "[Speichern]",
         "quit": "[Beenden]",
         "teffect": "[Sofort anwenden]",
-        "join": "[TG-Kanal beitreten]"
+        "join": "[TG-Kanal beitreten]",
+        "github": "[GitHub-Projekt]"
     },
     "tag": {
         "content": "Bitte schließen Sie die Memory-Management-Benutzeroberfläche, um unnötigen Batterieverbrauch zu vermeiden. Nach dem Speichern der Konfiguration in der Benutzeroberfläche sollten Sie diese unbedingt beenden.",

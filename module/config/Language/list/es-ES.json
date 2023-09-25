@@ -29,7 +29,8 @@
         "save": "[Guardar]",
         "quit": "[Salir]",
         "teffect": "[Aplicar ahora]",
-        "join": "[Unirse al canal TG]"
+        "join": "[Unirse al canal TG]",
+        "github": "[Proyecto de GitHub]"
     },
     "tag": {
         "content": "Por favor, cierre la interfaz de gestión de memoria para evitar un consumo innecesario de energía en segundo plano. Una vez que haya guardado la configuración en la interfaz, salga.",
