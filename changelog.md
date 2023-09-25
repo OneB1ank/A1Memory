@@ -1,5 +1,8 @@
 # 【更新日志】
 
+## Beta22 2023.09.25
+- 修复判断sys.boot_completed造成陷入死循环
+
 ## Beta21 2023.09.24
 - 预支持Android14
 - 解决多次注入导致lmkd发生错误
@@ -105,4 +108,4 @@
 - 相对于内存管理v3.1减少80%性能消耗
 - 改进编译优化，减少二进制体积
 
-## 重要更新在频道通知：[TG频道](https://t.me/HCha1234) | [项目地址](https://github.com/OneB1ank/A1Memory)
+## 重要更新在频道通知：[TG频道](https://t.me/HCha1234) | [项目地址](https://github.com/OneB1ank/A1Memory)  wa的a'w'D'W'A'a'da's'd
