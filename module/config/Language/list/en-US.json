@@ -32,6 +32,36 @@
         "join": "[Join TG channel]",
         "github": "[GitHub Project]"
     },
+    "feature_Description": {
+        "clever": {
+            "Description_title": "Clever Mode",
+            "Description": "Ends custom-added processes to free up memory; these will only be terminated if they aren't in the foreground."
+        },
+        "a1Memory": {
+            "Description_title": "A1 Memory Management",
+            "Description": "Automatically manages memory, choosing to release part of a process's memory based on the situation, or terminate those processes when necessary."
+        },
+        "CutMemoryFreed": {
+            "Description_title": "Memory Release",
+            "Description": "By default, it reduces the memory usage of cached processes. However, there's no need to worry, this is only to make them more memory-efficient and won't actually terminate these processes."
+        },
+        "appSleep": {
+            "Description_title": "App Sleep",
+            "Description": "This feature prevents an app's subprocesses from restarting after being terminated. While it can't guarantee a 100% prevention of subprocess restart, it also helps reduce memory and CPU usage."
+        },
+        "crazyKill": {
+            "Description_title": "Intensive Termination",
+            "Description": "Invokes a kernel interface to free up memory, even if its specific criteria aren't very clear. However, based on current validations, it indeed helps the phone run more smoothly. But be aware, it might terminate some background app processes."
+        },
+        "injection": {
+            "Description_title": "Prevent lmkd",
+            "Description": "Hooks and injects into lmkd, modifying its execution logic, thereby preventing it from terminating background app processes. This means you can run many app processes without worrying about them being killed. However, be cautious as running too many app processes might make the phone run less smoothly."
+        },
+        "memThreshold": {
+            "Description_title": "Memory Threshold",
+            "Description": "When activated, if physical memory usage reaches a specified threshold, lmkd is allowed to terminate app processes, thus preventing phone lags or force restarts. Please note, this feature only becomes active after lmkd prevention is enabled."
+        }
+    },    
     "tag": {
         "content": "Please close the memory management UI to avoid unnecessary battery consumption. After saving the configuration in the UI, be sure to exit.",
         "title": "Please save the configuration and restart the phone, process: UI_memory"

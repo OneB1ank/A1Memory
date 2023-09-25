@@ -32,6 +32,36 @@
         "join": "[Unirse al canal TG]",
         "github": "[Proyecto de GitHub]"
     },
+    "feature_Description": {
+        "clever": {
+            "Description_title": "Modo Astuto",
+            "Description": "Termina los procesos agregados personalizados para liberar memoria, solo se finalizarán si no están en primer plano."
+        },
+        "a1Memory": {
+            "Description_title": "Gestión de memoria A1",
+            "Description": "Administra automáticamente la memoria, eligiendo liberar parte de la memoria del proceso o, si es necesario, finalizar estos procesos directamente."
+        },
+        "CutMemoryFreed": {
+            "Description_title": "Liberación de memoria",
+            "Description": "Por defecto reduce el uso de memoria de los procesos en caché. Pero no te preocupes, esto solo es para que sean más eficientes en el uso de memoria y no finalizará estos procesos."
+        },
+        "appSleep": {
+            "Description_title": "Suspensión de la aplicación",
+            "Description": "Esta función evita que los subprocesos de la aplicación se reinicien después de ser finalizados. Aunque no garantiza un 100% de prevención de reinicio, también ayuda a reducir el uso de memoria y CPU."
+        },
+        "crazyKill": {
+            "Description_title": "Finalización intensiva",
+            "Description": "Invoca una interfaz del núcleo para liberar memoria, aunque los criterios exactos aún no están claros. Sin embargo, según las pruebas actuales, puede hacer que el teléfono funcione más fluidamente. Pero ten en cuenta que puede finalizar algunos procesos de aplicaciones en segundo plano."
+        },
+        "injection": {
+            "Description_title": "Bloqueo de lmkd",
+            "Description": "Inyección hook en lmkd, modificando su lógica de ejecución, evitando que finalice procesos de aplicaciones en segundo plano. Esto significa que puedes tener muchos procesos de aplicaciones ejecutándose sin preocuparte de que sean finalizados. Sin embargo, ten en cuenta que tener demasiados procesos puede hacer que el teléfono funcione con menos fluidez."
+        },
+        "memThreshold": {
+            "Description_title": "Umbral de memoria",
+            "Description": "Al activar esta función, cuando el uso de memoria física alcance un umbral especificado, lmkd puede finalizar procesos de la aplicación, evitando así bloqueos o reinicios del teléfono. Es importante saber que esta función solo estará activa si se bloquea lmkd."
+        }
+    },    
     "tag": {
         "content": "Por favor, cierre la interfaz de gestión de memoria para evitar un consumo innecesario de energía en segundo plano. Una vez que haya guardado la configuración en la interfaz, salga.",
         "title": "Por favor, guarde la configuración y reinicie el teléfono. Proceso: UI_memory"

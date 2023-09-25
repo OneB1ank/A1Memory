@@ -32,6 +32,36 @@
         "join": "[TG-Kanal beitreten]",
         "github": "[GitHub-Projekt]"
     },
+    "feature_Description": {
+        "clever": {
+            "Description_title": "Schlauer Modus",
+            "Description": "Beendet benutzerdefinierte Prozesse, um Speicher freizugeben; diese werden nur beendet, wenn sie nicht im Vordergrund laufen."
+        },
+        "a1Memory": {
+            "Description_title": "A1 Speicherverwaltung",
+            "Description": "Verwaltet den Speicher automatisch und wählt je nach Situation aus, ob ein Teil des Speichers eines Prozesses freigegeben oder die Prozesse bei Bedarf direkt beendet werden."
+        },
+        "CutMemoryFreed": {
+            "Description_title": "Speicherfreigabe",
+            "Description": "Standardmäßig wird der Speicherverbrauch von zwischengespeicherten Prozessen reduziert. Aber keine Sorge, dies dient nur dazu, sie speichereffizienter zu machen und beendet diese Prozesse nicht wirklich."
+        },
+        "appSleep": {
+            "Description_title": "App Schlafmodus",
+            "Description": "Diese Funktion verhindert, dass Unterprozesse einer App nach ihrer Beendigung neu gestartet werden. Obwohl sie nicht zu 100% den Neustart von Unterprozessen verhindern kann, hilft sie auch, den Speicher- und CPU-Verbrauch zu reduzieren."
+        },
+        "crazyKill": {
+            "Description_title": "Intensives Beenden",
+            "Description": "Ruft eine Kernel-Schnittstelle auf, um Speicher freizugeben, auch wenn die spezifischen Kriterien nicht sehr klar sind. Basierend auf aktuellen Überprüfungen hilft es jedoch, das Telefon flüssiger laufen zu lassen. Beachten Sie jedoch, dass einige Hintergrund-App-Prozesse möglicherweise beendet werden."
+        },
+        "injection": {
+            "Description_title": "lmkd verhindern",
+            "Description": "Verknüpft und injiziert in lmkd, modifiziert seine Ausführungslogik und verhindert so, dass es Hintergrund-App-Prozesse beendet. Das bedeutet, dass Sie viele App-Prozesse ausführen können, ohne sich Gedanken darüber zu machen, dass sie beendet werden. Seien Sie jedoch vorsichtig, da zu viele App-Prozesse dazu führen könnten, dass das Telefon weniger flüssig läuft."
+        },
+        "memThreshold": {
+            "Description_title": "Speicherschwelle",
+            "Description": "Wenn diese Funktion aktiviert ist und der physische Speicherverbrauch einen bestimmten Schwellenwert erreicht, darf lmkd App-Prozesse beenden, wodurch Telefonverzögerungen oder erzwungene Neustarts verhindert werden. Bitte beachten Sie, dass diese Funktion nur aktiv wird, wenn lmkd verhindert ist."
+        }
+    },    
     "tag": {
         "content": "Bitte schließen Sie die Memory-Management-Benutzeroberfläche, um unnötigen Batterieverbrauch zu vermeiden. Nach dem Speichern der Konfiguration in der Benutzeroberfläche sollten Sie diese unbedingt beenden.",
         "title": "Bitte speichern Sie die Konfiguration und starten Sie das Telefon neu, Prozess: UI_memory"

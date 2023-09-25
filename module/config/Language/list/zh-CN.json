@@ -32,6 +32,36 @@
         "join": "[加入TG频道]",
         "github": "[GitHub项目]"
     },
+    "feature_Description": {
+        "clever": {
+            "Description_title": "乖巧模式-说明",
+            "Description": "结束自定义添加的进程来释放内存，非前台状态下才会结束。"
+        },
+        "a1Memory": {
+            "Description_title": "A1内存管理-说明",
+            "Description": "自动管理内存根据情况选择释放 进程的部分内存，或者在必要时 直接结束这些进程。"
+        },
+        "CutMemoryFreed": {
+            "Description_title": "内存释放-说明",
+            "Description": "默认是减少缓存进程的内存占用。不过 不用担心，这只是为了让它们更加节省 内存，并不会真的结束这些进程。"
+        },
+        "appSleep": {
+            "Description_title": "应用休眠-说明",
+            "Description": "该功能为了防止应用的子进程在被杀死后重新启动。虽然不能百分百保 证阻止子进程重启，但同时它们也帮助减少了内存和CPU的使用。"
+        },
+        "crazyKill": {
+            "Description_title": "狂杀进程-说明",
+            "Description": "调用了内核接口来释放内存，尽管它的具体判定条件还不太清楚。但根 据目前的验证，它确实可以让手机运行得更加流畅。不过，需要注意的 是，这可能会导致一些后台应用进程被结束。"
+        },
+        "injection": {
+            "Description_title": "阻止lmkd-说明",
+            "Description": "hook注入lmkd，修改了其运行逻辑, 从而避免了它结束后台的应用进程. 这意味着你可以开启很多应用进程 而不用担心它们被杀。但要注意， 开启过多的应用进程不杀可能会使 手机不流畅。"
+        },
+        "memThreshold": {
+            "Description_title": "内存阈值-说明",
+            "Description": "开启此功能，当物理内存使用率 达到指定的阈后，将允许lmkd结 束应用进程，从而避免手机出现 卡顿或死机重启的情况。需要注 意的是，只有在开启阻止lmkd后, 这个功能才会生效。"
+        }
+    },
     "tag": {
         "content": "请关闭内存管理UI避免造成意外的后台耗电，使用UI保存配置后一定要退出。",
         "title": "请保存配置后重启手机，进程：UI_memory"
