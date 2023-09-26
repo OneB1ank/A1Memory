@@ -28,7 +28,7 @@
 
 ## 📱终端UI
 自定义开关功能，只支持简单的功能开关，更具体的参数配置请查看📝自定义配置。
-![UI图片](image/ui.jpg)
+![UI图片](image/ui_cn.jpg)
 如何打开终端UI界面？
 - 可在Termux中使用`amui`命令，也可在mt管理器中执行/sdcard/Android/HChai/HC_memory/`terminal.sh`
 
