@@ -345,7 +345,7 @@ You can write content to files using A1 Memory Management v4. Below is an exampl
 ```json
 "file": {
     "write": [
-        {KV
+        {
             "path": "/proc/sys/fs/inotify/max_queued_events",
             "content": "102400"
         },
