@@ -1,6 +1,6 @@
 {
     "project": {
-        "name": "官方配置 [23.07.12]",
+        "name": "官方配置 [23.09.29]",
         "author": "火機@coolapk"
     },
     "modules": {
@@ -38,7 +38,7 @@
             }
         },
         "initInjection": {
-            "enable": false,
+            "enable": true,
             "processName": "/system/bin/lmkd",
             "symbolsFunc": "hc_hook",
             "libraryPath": "/data/adb/modules/Hc_memory/lib/arm64-v8a/libhook_lmkd.so",
@@ -77,15 +77,15 @@
         "write": [
             {
                 "path": "/proc/sys/fs/inotify/max_queued_events",
-                "content": "102400"
+                "content": "16384"
             },
             {
                 "path": "/proc/sys/fs/inotify/max_user_watches",
-                "content": "102400"
+                "content": "98304"
             },
             {
                 "path": "/proc/sys/fs/inotify/max_user_instances",
-                "content": "1024"
+                "content": "896"
             }
         ]
     }
