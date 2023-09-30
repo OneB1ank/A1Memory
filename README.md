@@ -20,7 +20,7 @@
 ## 💡Description
 - This module only supports Android 8 to 14, and the platform is limited to arm64-v8a.
 - Magisk version should be 20.4+ and ksu is mostly compatible.
-- This module will not conflict with any other modules.
+- This module is unlikely to conflict with other modules.
 
 ### Default List Path
 ![列表图片](image/list.jpg)
