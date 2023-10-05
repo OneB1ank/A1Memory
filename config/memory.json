@@ -38,7 +38,7 @@
             }
         },
         "initInjection": {
-            "enable": true,
+            "enable": false,
             "processName": "/system/bin/lmkd",
             "symbolsFunc": "hc_hook",
             "libraryPath": "/data/adb/modules/Hc_memory/lib/arm64-v8a/libhook_lmkd.so",
