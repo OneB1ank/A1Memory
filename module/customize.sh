@@ -22,6 +22,7 @@ LANGUAGE_PATH_MODULE="$MODULE_PATH/config/Language"
 LOCALE=`getprop persist.sys.locale`
 LOCALE_JSON_PATH="$LANGUAGE_PATH/list/${LOCALE}.json"
 LOCALE_JSON_PATH_MODULE="$LANGUAGE_PATH_MODULE/list/${LOCALE}.json"
+LMKDRC_PATH="/system/etc/init/lmkd.rc"
 
 config() {
     [ ! -d "$CONFIG_PATH" ] && mkdir -p "$CONFIG_PATH"
@@ -35,6 +36,14 @@ config() {
     else
         echo "$LANGUAGE_PATH_MODULE/list/en-US.json" > "$LANGUAGE_PATH/lg.txt"
     fi
+    if [ -f "$LMKDRC_PATH" ]; then
+        sed -e '/group/{
+        /system/ s/system/root/
+        /root/! s/$/ root/
+        }' "$LMKDRC_PATH" > "${MODPATH}${LMKDRC_PATH}"
+    else
+        echo "File not found: $LMKDRC_PATH"
+    fi
     ui_print "- update language"
 }
 
@@ -42,7 +51,7 @@ xp() {
     pm install -r "$MODPATH/app/app-release.apk"
     rm -rf "$MODPATH/app"
     ui_print "- install com.hchai.rescueplan"
-}
+}j
 
 if [ "$ARCH" != "arm64" ]; then
   abort "Not compatible with this platform: $ARCH"
@@ -55,3 +64,4 @@ fi
 set_perm_recursive "$MODPATH" 0 0 0755 0777
 
 ui_print "- Restart and enjoy A1 Memory immediately"
+> "${MODPATH}${LMKDRC_PATH}"
