@@ -1,7 +1,7 @@
 id=Hc_memory
 name=A1-内存管理 [Richard]
-version=v4 (2023.11.04)
-versionCode=434
+version=v4 (2023.11.06)
+versionCode=435
 author=HChai
 description=Third-party memory management, support Android 8 ~ 14. project: https://github.com/OneB1ank/A1Memory
 updateJson=https://ghproxy.com/https://raw.githubusercontent.com/OneB1ank/A1Memory/main/version.json
