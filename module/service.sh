@@ -28,51 +28,15 @@ done
 
 adjustPermissions() {
     local dir="$1"
-    local perms=$(stat -c %A "$dir")
-    local owner_read_perm=${perms:1:1}
-    local owner_write_perm=${perms:2:1}
-    local group_read_perm=${perms:4:1}
-    local group_write_perm=${perms:5:1}
-    local other_read_perm=${perms:7:1}
-    local other_write_perm=${perms:8:1}
-
-    # 根据检测到的权限，为所有者、用户组和其他用户逐一添加缺失的权限
-    if [ "$owner_read_perm" != "r" ]; then
-        chmod u+r "$dir"
-    fi
-
-    if [ "$owner_write_perm" != "w" ]; then
-        chmod u+w "$dir"
-    fi
-
-    if [ "$group_read_perm" != "r" ]; then
-        chmod g+r "$dir"
-    fi
-
-    if [ "$group_write_perm" != "w" ]; then
-        chmod g+w "$dir"
-    fi
-
-    if [ "$other_read_perm" != "r" ]; then
-        chmod o+r "$dir"
-    fi
-
-    if [ "$other_write_perm" != "w" ]; then
-        chmod o+w "$dir"
-    fi
+    chmod u+r,u+w,g+r,g+w,o+r,o+w "$dir"
 }
 
 init() {
     cd $MODDIR
-    logfile_path=$(grep -A 1 '"log":' config/memory.json | grep '"path":' | awk -F'"path": "' '{print $2}' | awk -F'"' '{print $1}')
-    # logfile如果为空
-    if [ -z "$logfile_path" ]; then
-        logfile_path=$(grep -A 2 '"log":' config/memory.json | grep '"path":' | awk -F'"path": "' '{print $2}' | awk -F'"' '{print $1}')
-    fi
+    logfile_path=$(grep -A 3 '"log":' config/memory.json | grep '"path":' | awk -F'"path": "' '{print $2}' | awk -F'"' '{print $1}')
 }
 
 memory() {
-    adjustPermissions "/data/media/0/Android/HChai/HC_memory"
     rm -rf "$logfile_path"
     touch "$logfile_path"
     $MODDIR/HC_memory
@@ -81,4 +45,5 @@ memory() {
 }
 
 init
+adjustPermissions "/data/media/0/Android/HChai/HC_memory"
 memory
