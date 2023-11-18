@@ -29,25 +29,13 @@ This repository incorporates components from the following projects:
    - Copyright: gabime
    - Other relevant information: Please refer to the spdlog project for additional details and acknowledgments.
 
-5. AndroidPtraceInject (https://github.com/SsageParuders/AndroidPtraceInject): Android Ptrace Inject for all ABIs and all APIs. Help you inject Shared Library on Android.
-
-   - License: MIT License (https://github.com/SsageParuders/AndroidPtraceInject/blob/master/LICENSE)
-   - Copyright: SsageParuders
-   - Other relevant information: Please refer to the AndroidPtraceInject project for additional details and acknowledgments.
-
-6. imgui (https://github.com/ocornut/imgui): Dear ImGui: Bloat-free Graphical User interface for C++ with minimal dependencies
+5. imgui (https://github.com/ocornut/imgui): Dear ImGui: Bloat-free Graphical User interface for C++ with minimal dependencies
 
    - License: MIT License (https://github.com/ocornut/imgui/blob/master/LICENSE.txt)
    - Copyright: ocornut
    - Other relevant information: Please refer to the imgui project for additional details and acknowledgments.
 
-7. Android_Native_Surface (https://github.com/SsageParuders/Android_Native_Surface): Android Native Surface
-
-   - License: MIT License (https://github.com/SsageParuders/Android_Native_Surface/blob/master/LICENSE)
-   - Copyright: SsageParuders
-   - Other relevant information: Please refer to the Android_Native_Surface project for additional details and acknowledgments.
-
-8. FTXUI (https://github.com/ArthurSonzogni/FTXUI): 💻 C++ Functional Terminal User Interface. ❤️
+6. FTXUI (https://github.com/ArthurSonzogni/FTXUI): 💻 C++ Functional Terminal User Interface. ❤️
 
    - License: MIT License (https://github.com/ArthurSonzogni/FTXUI/blob/main/LICENSE)
    - Copyright: ArthurSonzogni
