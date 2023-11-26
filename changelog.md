@@ -1,5 +1,9 @@
 # 【更新日志】
 
+## Richard8 2023.11.26
+- 更新ndk到r26b
+- 更新hllvm混淆
+
 ## Richard7 2023.11.08
 - 修复Inotify导致的问题
 - 优化代码减少CPU消耗
